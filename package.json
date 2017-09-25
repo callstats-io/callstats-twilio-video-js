@@ -1,0 +1,47 @@
+{
+  "name": "callstats-twiliovideojs",
+  "version": "1.0.0",
+  "description": "Twilio Video.js interface for callstats.io",
+  "authors": [
+    "Dan Jenkins <dan@nimblea.pe>"
+  ],
+  "license": "UNLICENSED",
+  "main": "lib/index.js",
+  "dependencies": {
+    "babel-runtime": "^6.18.0",
+    "debug": "2.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:callstats-io/callstats-twiliovideojs.git"
+  },
+  "keywords": [
+    "csio",
+    "callstats-io",
+    "twiliovideojs"
+  ],
+  "bugs": {
+    "url": "https://github.com/callstats-io/callstats-twiliovideojs/issues"
+  },
+  "homepage": "https://github.com/callstats-io/callstats-twiliovideojs/",
+  "devDependencies": {
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
+    "envify": "^3.4.1",
+    "eslint": "^3.10.0",
+    "eslint-plugin-import": "^2.2.0",
+    "gulp": "git://github.com/gulpjs/gulp.git#4.0",
+    "gulp-eslint": "^3.0.1",
+    "gulp-header": "^1.8.8",
+    "gulp-if": "^2.0.2",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0"
+  }
+}
