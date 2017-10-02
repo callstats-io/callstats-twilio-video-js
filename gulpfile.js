@@ -66,7 +66,7 @@ function bundle(options)
 			packageCache : {},
 			// required to be true only for watchify.
 			fullPaths    : watch,
-			standalone   : 'callstatstwiliovideojs'
+			standalone   : 'callstatstwiliovideo'
 		})
 		.transform('babelify',
 			{

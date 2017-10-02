@@ -1,5 +1,5 @@
 {
-  "name": "callstats-twiliovideojs",
+  "name": "callstats-twilio-video",
   "version": "1.0.0",
   "description": "Twilio Video.js interface for callstats.io",
   "authors": [

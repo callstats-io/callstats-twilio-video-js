@@ -6,7 +6,7 @@
 
 * Adding a `<script>` tag in the HTML.
 
-In case no module loaded is used, a global `window.callstatstwiliovideojs` is exposed.
+In case no module loaded is used, a global `window.callstatstwiliovideo` is exposed.
 
 _NOTE:_ This library does not include the **callstats.io** library (it must be added separetely).
 
@@ -26,8 +26,8 @@ In the HTML:
     <script src="https://api.callstats.io/static/callstats.min.js"></script>
     <!-- Load Twilio Video JS library -->
     <script src="//media.twiliocdn.com/sdk/js/video/v1/twilio-video.min.js"></script>
-    <!-- Load callstats-twiliovideojs library (it provides window.callstatstwiliovideojs) -->
-    <script src="js/callstats-twiliovideojs.js"></script>
+    <!-- Load callstats-twilio-video library (it provides window.callstatstwiliovideo) -->
+    <script src="js/callstats-twilio-video.js"></script>
     <!-- Load our app code -->
     <script src="js/app.js"></script>
   </head>
@@ -46,7 +46,7 @@ const Video = Twilio.Video;
 
 Video.connect('$TOKEN', { name: 'room-name' }).then(room => {
 
-  callstatstwiliovideojs(room, peerToPeerTruthy, AppID, AppSecret);
+  callstatstwiliovideo(room, peerToPeerTruthy, AppID, AppSecret);
 
   console.log('Connected to Room "%s"', room.name);
 
@@ -54,15 +54,15 @@ Video.connect('$TOKEN', { name: 'room-name' }).then(room => {
 
 });
 
-// Run the callstats-twiliovideojs library for this Twilio.Video.Room
+// Run the callstats-twilio-video library for this Twilio.Video.Room
 ```
 
-## Development (TODO)
+## Development
 
 When using Bower or a `<script>` tag, the provided library is built with [browserify](http://browserify.org), which means that it can be used with any kind of JavaScript module loader system (AMD, CommonJS, etc) or,
 
-* Using NPM: `$ npm install callstats-twiliovideojs`
-* Using Bower: `$ bower install callstats-twiliovideojs`
+* Using NPM: `$ npm install callstats-twilio-video`
+* Using Bower: `$ bower install callstats-twilio-video`
 
 
 Install NPM development dependencies:
@@ -77,10 +77,10 @@ Install `gulp-cli` globally (which provides the `gulp` command):
 $ npm install -g gulpjs
 ```
 
-* `gulp prod` generates a production/minified `dist/callstats-twiliovideojs.min.js` bundle.
-* `gulp dev` generates a development non-minified and sourcemaps enabled `dist/callstats-twiliovideojs.js` bundle.
+* `gulp prod` generates a production/minified `dist/callstats-twilio-video.min.js` bundle.
+* `gulp dev` generates a development non-minified and sourcemaps enabled `dist/callstats-twilio-video.js` bundle.
 
 
 ## Authors
-
+Karthik BR (https://callstats.io),
 Dan Jenkins at Nimble Ape Ltd (https://nimblea.pe).

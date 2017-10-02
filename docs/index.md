@@ -3,12 +3,12 @@
 
 ## API
 
-The main module `callstatstwiliovideojs` is a function that receives a `TwilioVideoJS.Video.Room` instance and parameters for `callstats.initialize()`.
+The main module `callstatstwiliovideo` is a function that receives a `TwilioVideoJS.Video.Room` instance and parameters for `callstats.initialize()`.
 
 The main module also exports a `setCallstatsModule()` function.
 
 
-#### `callstatstwiliovideojs(room, peerToPeer, AppID, AppSecretOrTokenGenerator, localUserID, csInitCallback, csStatsCallback, configParams)`
+#### `callstatstwiliovideo(room, peerToPeer, AppID, AppSecretOrTokenGenerator, localUserID, csInitCallback, csStatsCallback, configParams)`
 
 | Params       | Argument  | Type                        | Description                            |
 |--------------|-----------|-----------------------------|----------------------------------------|
@@ -20,7 +20,7 @@ The rest of parameters match those in [callstats.initialize()](http://www.callst
 * `localUserID` is not required. If `null`, the library fills it with an object containing the identity used while creating the Twilio room.
 
 
-#### `callstatstwiliovideojs.setCallstatsModule(module)`
+#### `callstatstwiliovideo.setCallstatsModule(module)`
 
 | Params   | Argument  | Type        | Description                  |
 |----------|-----------|-------------|------------------------------|
@@ -28,12 +28,12 @@ The rest of parameters match those in [callstats.initialize()](http://www.callst
 
 By default this library uses `window.callstats` (assuming that the **callstats.io** library has been previously loaded via a `<script>` tag.
 
-However, the **callstats.io** library can also be loaded using loaders such as [require.js](http://www.requirejs.org/) meaning that it may be not exposed as a global `window.callstats`. In that case, `callstatstwiliovideojs.setCallstatsModule()` can be used to provide the **callstats-twiliovideojs** library with the **callstats.io** main module.
+However, the **callstats.io** library can also be loaded using loaders such as [require.js](http://www.requirejs.org/) meaning that it may be not exposed as a global `window.callstats`. In that case, `callstatstwiliovideo.setCallstatsModule()` can be used to provide the **callstats-twilio-video** library with the **callstats.io** main module.
 
 
 ### `SessionHandler` class
 
-When a TwilioVideoJS.Video.Room `Session` is created, the **callstats-twiliovideojs** library creates an instance of `SessionHandler` and stores it into `room.callstatsSessionHandler` to make it available to the application.
+When a TwilioVideoJS.Video.Room `Session` is created, the **callstats-twilio-video** library creates an instance of `SessionHandler` and stores it into `room.callstatsSessionHandler` to make it available to the application.
 
 The `SessionHandler` class provides a wrapper over the API exposed by the `callstats` object, making it simpler by not requiring some parameters such as `conferenceID`.
 
@@ -60,4 +60,3 @@ Arguments match those in [callstats.sendUserFeedback()](http://www.callstats.io/
 #### `sessionHandler.reportError(err)`
 
 With Twilio Video, you the user need to take greater responsibility of tracking twilio video errors and sending them to callstats. All you need to do is pass on the error to the reportError function and the library will take care of everything else.
-
