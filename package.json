@@ -1,6 +1,6 @@
 {
   "name": "callstats-twilio-video",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Twilio Video.js interface for callstats.io",
   "authors": [
     "Dan Jenkins <dan@nimblea.pe>"
