@@ -8,17 +8,25 @@ The main module `callstatstwiliovideo` is a function that receives a `TwilioVide
 The main module also exports a `setCallstatsModule()` function.
 
 
-#### `callstatstwiliovideo(room, peerToPeer, AppID, AppSecretOrTokenGenerator, localUserID, csInitCallback, csStatsCallback, configParams)`
+#### `callstats = callstatstwiliovideo(room, peerToPeer, AppID, AppSecretOrTokenGenerator, localUserID, csInitCallback, csStatsCallback, configParams)`
 
-| Params       | Argument  | Type                        | Description                            |
-|--------------|-----------|-----------------------------|----------------------------------------|
-| `room`       | Required  | `TwilioVideoJS.Video.Room`  | Twilio Video `Room` instance.          |
-| `peerToPeer` | Required  | `Boolean`                   | Whether the room is set to peerToPeer  |
+| Params       | Argument  | Type                        | Description                               |
+|--------------|-----------|-----------------------------|-------------------------------------------|
+| `room`       | Required  | `TwilioVideoJS.Video.Room`  | Twilio Video `Room` instance or null      |
+| `peerToPeer` | Required  | `Boolean`                   | Whether the room is set to peerToPeer     |
+| `localUserID`| Optional  | `String`                    | localUserID is mandatory when room is null|
 
 The rest of parameters match those in [callstats.initialize()](http://www.callstats.io/api/#callstats-initialize-with-app-secret), with a small difference:
 
 * `localUserID` is not required. If `null`, the library fills it with an object containing the identity used while creating the Twilio room.
 
+* This returns callstats object.
+
+#### `callstatstwiliovideo.setTwilioVideoRoom(room)`
+
+| Params   | Argument  | Type                        | Description                  |
+|----------|-----------|-----------------------------|------------------------------|
+| `room`   | Required  | `TwilioVideoJS.Video.Room`  | Twilio Video `Room` instance |
 
 #### `callstatstwiliovideo.setCallstatsModule(module)`
 
