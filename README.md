@@ -27,7 +27,7 @@ In the HTML:
     <!-- Load Twilio Video JS library -->
     <script src="//media.twiliocdn.com/sdk/js/video/v1/twilio-video.min.js"></script>
     <!-- Load callstats-twilio-video library (it provides window.callstatstwiliovideo) -->
-    <script src="js/callstats-twilio-video.js"></script>
+    <script src="https://api.callstats.io/static/callstats-twilio-video.min.js"></script>
     <!-- Load our app code -->
     <script src="js/app.js"></script>
   </head>
