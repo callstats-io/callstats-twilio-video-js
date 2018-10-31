@@ -192,30 +192,30 @@ gulp.task('bundle:watch', () =>
 gulp.task('watch', (done) =>
 {
 	// Watch changes in JS files.
-	gulp.watch([ 'gulpfile.js', 'lib/**/*.js' ], gulp.series(
+	gulp.watch([ 'gulpfile.js', 'lib/**/*.js' ], [
 		'lint'
-	));
+	]);
 
 	done();
 });
 
-gulp.task('prod', gulp.series(
+gulp.task('prod', [
 	'env:prod',
 	'lint',
 	'bundle'
-));
+]);
 
-gulp.task('dev', gulp.series(
+gulp.task('dev', [
 	'env:dev',
 	'lint',
 	'bundle'
-));
+]);
 
-gulp.task('live', gulp.series(
+gulp.task('live', [
 	'env:dev',
 	'lint',
 	'bundle:watch',
 	'watch'
-));
+]);
 
-gulp.task('default', gulp.series('prod'));
+gulp.task('default', ['prod']);
