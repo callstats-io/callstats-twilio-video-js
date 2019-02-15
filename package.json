@@ -1,6 +1,6 @@
 {
   "name": "callstats-twilio-video",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Twilio Video.js interface for callstats.io",
   "authors": [
     "Dan Jenkins <dan@nimblea.pe>"
@@ -9,7 +9,7 @@
   "main": "lib/index.js",
   "dependencies": {
     "babel-runtime": "^6.18.0",
-    "debug": ">=2.6.9"
+    "debug": "^3.1.0"
   },
   "repository": {
     "type": "git",
@@ -32,7 +32,7 @@
     "envify": "^3.4.1",
     "eslint": "^3.10.0",
     "eslint-plugin-import": "^2.2.0",
-    "gulp": "git://github.com/gulpjs/gulp.git#4.0",
+    "gulp": "^4.0.0",
     "gulp-eslint": "^3.0.1",
     "gulp-header": "^1.8.8",
     "gulp-if": "^2.0.2",
@@ -40,8 +40,8 @@
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0",
     "watchify": "^3.7.0"
   }
 }
